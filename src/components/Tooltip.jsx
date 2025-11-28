@@ -1,14 +1,10 @@
-function Tooltip({ text, children }) {
-  const [isVisible, setIsVisible] = useState(false);
+import React from "react";
 
+function Tooltip({ text, children }) {
   return (
-    <div
-      className="tooltip"
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-    >
+    <div className="tooltip">
       {children}
-      {isVisible && <span className="tooltiptext">{text}</span>}
+      <span className="tooltiptext">{text}</span>
     </div>
   );
 }

@@ -1,19 +1,20 @@
-
+import React from "react";
 import Tooltip from "./Tooltip";
-import './../styles/App.css';
 
-const App = () => {
+import './../styles/App.css'
+
+export function App(props) {
   return (
-    <div className='App'>
+    <div className="App">
       <Tooltip text="This is an amazing feature!">
         <p>Hover over me</p>
       </Tooltip>
 
       <Tooltip text="I am a tooltip for this button">
-        <p>Hover here me to see another tooltip</p>
+        <button>Hover me too!</button>
       </Tooltip>
-    </div>
-  )
-}
 
-export default App
+     
+    </div>
+  );
+}
